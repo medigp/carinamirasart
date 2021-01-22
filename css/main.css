@@ -193,6 +193,10 @@ body > #wrapper > footer{
 	text-align: center;
 }
 
+body > #wrapper > footer ul{
+	padding:0;
+}
+
 /* GENERIC STYLES */
 a {
 	-moz-transition: color 0.2s ease, border-color 0.2s ease;
