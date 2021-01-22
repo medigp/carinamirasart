@@ -125,7 +125,7 @@ body > #wrapper > header{
 	text-align: center;
 	height: 100vh;
 
-	background-image: url("../img/general/header-background-m.jpeg");
+	background-image: url("../img/general/header-background-l.jpeg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -135,7 +135,7 @@ body > #wrapper > header{
 
 @media (min-width: 1200px) {
 	body > #wrapper > header{
-		background-image: url("../img/general/header-background-l.jpeg");
+		background-image: url("../img/general/header-background-xl.jpeg");
 	}
 }
 
