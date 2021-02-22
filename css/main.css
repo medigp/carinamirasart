@@ -152,13 +152,12 @@ body > #wrapper > header > section{
 }
 
 body.is-preload > #wrapper > header > section {
-		-moz-transform: rotateX(15deg);
-		-webkit-transform: rotateX(15deg);
-		-ms-transform: rotateX(15deg);
-		transform: rotateX(15deg);
-		opacity: 0;
-		font-size: 0.8em;
-	}
+	-moz-transform: rotateX(15deg);
+	-webkit-transform: rotateX(15deg);
+	-ms-transform: rotateX(15deg);
+	transform: rotateX(15deg);
+	font-size: 0.75em;
+}
 
 body > #wrapper > header > section h1{
     color: black;
