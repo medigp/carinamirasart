@@ -145,10 +145,10 @@ body > #wrapper > header > section{
 
 
 
-	-moz-transition: all 1s ease;
-		-webkit-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		transition: all 1s ease;
+	-moz-transition: all .5s ease;
+		-webkit-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		transition: all .5s ease;
 }
 
 body.is-preload > #wrapper > header > section {
@@ -191,7 +191,9 @@ body > #wrapper > footer ul{
 /* LazyLoad override*/
 [data-lazyload-background-url]{
 	overflow:hidden;
-
+background-image: -webkit-linear-gradient(left, #292E49, #536976);
+background-image: -o-linear-gradient(left, #292E49, #536976);
+background-image: linear-gradient(to right, #292E49, #536976);
 }
 [data-lazyload-background-url].loading .background-lazy-loader{
 	transform: scale(1.2);
