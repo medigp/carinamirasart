@@ -125,20 +125,12 @@ body > #wrapper > header{
 	text-align: center;
 	height: 100vh;
 
-	background-image: url("../img/general/header-background-l.jpeg");
+	
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;	
 }
-
-
-@media (min-width: 1200px) {
-	body > #wrapper > header{
-		background-image: url("../img/general/header-background-xl.jpeg");
-	}
-}
-
 
 
 body > #wrapper > header > section{
@@ -197,6 +189,20 @@ body > #wrapper > footer ul{
 	padding:0;
 }
 
+/* LazyLoad override*/
+[data-lazyload-background-url]{
+	overflow:hidden;
+
+}
+[data-lazyload-background-url].loading .background-lazy-loader{
+	transform: scale(1.2);
+	
+}
+[data-lazyload-background-url] .background-lazy-loader{
+  background-image: -webkit-linear-gradient(to right, #f2e088, #dbae6b);
+  background-image: linear-gradient(to right, #f2e088, #dbae6b);
+}
+
 /* GENERIC STYLES */
 a {
 	-moz-transition: color 0.2s ease, border-color 0.2s ease;
@@ -228,33 +234,33 @@ ol, ul {
 		border-bottom: none;
 	}
 
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-			padding-right: 0.5em;
-		}
+.icon:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+	padding-right: 0.5em;
+}
 
-		.icon > .label {
-			display: none;
-		}
+.icon > .label {
+	display: none;
+}
 
-		.icon:before {
-			line-height: inherit;
-		}
+.icon:before {
+	line-height: inherit;
+}
 
-		.icon.solid:before {
-			font-weight: 900;
-		}
+.icon.solid:before {
+	font-weight: 900;
+}
 
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
+.icon.brands:before {
+	font-family: 'Font Awesome 5 Brands';
+}
 

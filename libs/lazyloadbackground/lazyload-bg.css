@@ -1,0 +1,71 @@
+/***********************************************************
+* DATA-LAZYLOAD-BACKGROUND-URL
+*/
+[data-lazyload-background-url] {
+  position: relative;
+  width:100%;
+  min-height:50px;
+  box-sizing: border-box;
+  position:relative;
+  float:left;
+  z-index:1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 0.5s ease;
+}
+
+/* LazyLoaderBackground block */
+[data-lazyload-background-url] .background-lazy-loader{
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:100%;
+  opacity:0;
+  z-index:-1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  background: #536976;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 0.7s ease;
+  background-image: -webkit-linear-gradient(to right, #292E49, #536976);
+  background-image: linear-gradient(to right, #292E49, #536976);
+}
+
+[data-lazyload-background-url] .background-lazy-loader.add-animation{
+  background-size: 400% 100%;
+  animation: lbg-gradient 10s ease infinite;
+}
+
+/* Loading */
+[data-lazyload-background-url].loading{
+  background-image:none !important;
+}
+[data-lazyload-background-url].loading .background-lazy-loader {
+  opacity:1;
+}
+
+/* Download */
+[data-lazyload-background-url].downloaded{
+  box-shadow : 0px 0px 15px gray;
+}
+[data-lazyload-background-url].downloaded .background-lazy-loader{
+  /*transform: scale(0.95);*/
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
+@keyframes lbg-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
