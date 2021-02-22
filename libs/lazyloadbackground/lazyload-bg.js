@@ -13,11 +13,11 @@ let defaultOptions = {
   selector: 'data-lazyload-background-url',
   previewSelector : 'data-lazyload-background-url-preview',
   defaultSrcPreview: null,
-  addBackgroundAnimation : true,
-  forceNewDownload : true
+  addBackgroundAnimation : false,
+  forceNewDownload : false
 }
 
-function BackgroundNode({selector, previewSelector, node, defaultSrcPreview, addBackgroundAnimation = true, forceNewDownload = false}) {
+function BackgroundNode({selector, previewSelector, node, defaultSrcPreview, addBackgroundAnimation = false, forceNewDownload = false}) {
   
   let src = node.getAttribute(selector);
   if(!src)
